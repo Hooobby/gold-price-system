@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "http://wanfu9999.com/get_price.php$1" }
+  ]
+}

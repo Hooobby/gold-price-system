@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猪二贵金属报价系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">猪二贵金属报价系统 <span class="sub">实时行情</span></div>
+        <div class="timestamp" id="lastUpdate">2024.04.09 00:00:00</div>
+    </header>
+
+    <main class="dashboard">
+        <!-- Section 1: Top Metals -->
+        <section class="panel">
+            <div class="table-container">
+                <table id="table-general">
+                    <thead>
+                        <tr>
+                            <th>品种</th>
+                            <th class="center">买入/卖出</th>
+                            <th class="right">最高/最低</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data rows will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 2: Shanghai Market -->
+        <section class="panel">
+            <div class="section-title">上 海 行 情</div>
+            <div class="table-container">
+                <table id="table-shanghai">
+                    <thead>
+                        <tr>
+                            <th>品种</th>
+                            <th class="center">买入/卖出</th>
+                            <th class="right">最高/最低</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data rows will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 3: International Market -->
+        <section class="panel">
+            <div class="section-title">国 际 行 情</div>
+            <div class="table-container">
+                <table id="table-international">
+                    <thead>
+                        <tr>
+                            <th>品种</th>
+                            <th class="center">买入/卖出</th>
+                            <th class="right">最高/最低</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data rows will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="tabs">
+            <span class="active">行情</span>
+            <span>资讯</span>
+            <span>列设置</span>
+        </div>
+        <div class="disclaimer">
+            * 猪二贵金属报价系统 - 以上行情仅供参考，不作为交易依据。
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
