@@ -1,5 +1,5 @@
-// Use a public CORS proxy for GitHub Pages deployment
-const API_URL = 'https://api.allorigins.win/get?url=' + encodeURIComponent('http://wanfu9999.com/get_price.php');
+// Use a more stable CORS proxy for GitHub Pages
+const API_URL = 'https://corsproxy.io/?' + encodeURIComponent('http://wanfu9999.com/get_price.php');
 
 // Data mapping based on the flat array structure
 const PRODUCTS = {
@@ -118,13 +118,11 @@ function updateClock() {
  */
 async function updateData() {
     try {
-        // allorigins needs a cache-busting parameter in the proxy URL if needed
         const response = await fetch(`${API_URL}&rand=${Date.now()}`);
         if (!response.ok) throw new Error('Network response was not ok');
         
-        const json = await response.json();
-        // allorigins returns data in a 'contents' field as a string
-        const data = JSON.parse(json.contents);
+        // corsproxy.io returns the raw JSON/array directly
+        const data = await response.json();
         
         renderTable('table-general', PRODUCTS.general, data);
         renderTable('table-shanghai', PRODUCTS.shanghai, data);
