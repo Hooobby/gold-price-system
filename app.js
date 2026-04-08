@@ -150,5 +150,5 @@ setInterval(updateClock, 1000);
 // Initial fetch
 updateData();
 
-// Poll every 1 second
-setInterval(updateData, 1000);
+// Poll every 5 seconds to avoid 429 Too Many Requests from public proxy
+setInterval(updateData, 5000);
